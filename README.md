@@ -9,10 +9,10 @@
 | Nom | Rôle | GitHub | participation| 
 |---|---|---|---|
 | N'GOMA MABIALA RICKEN JAIBESS | Chef de Projet & QA | @dicken-con |validation qualite et index.html et readme.md|
-| OUSMANE FALL| Développeur Back-End | @ous | style.css et dossier image et apropos.html |
-|SANGOULE GADJI | Développeur Front-End 1 | @gadi |football.html et basketbal.html| 
+| OUSMANE FALL| Développeur Back-End | @fallousmanenoreyni-debug | style.css et dossier image et apropos.html |
+|SANGOULE GADJI | Développeur Front-End 1 | @samsoudinegadji-rgb |football.html et basketbal.html| 
 | MARIEME DIOP | Développeur Front-End 2 | @mariame | natation.html et tennis.html |
-| DJILY NDIAYE | Développeur Front-End 3| @djily |fitness.html et panier.html |
+| DJILY NDIAYE | Développeur Front-End 3| @Djilyndiaye |fitness.html et panier.html |
 
 ---
 
@@ -21,7 +21,7 @@
 | Branche | Rôle |
 |---|---|
 | `main` | Branche de production — contient le code final validé |
-| `dev` | Branche de développement — toujours le travail se fait ici |
+| `dev` | Branche de développement — tout le travail se fait ici |
 
 > ⚠️ La branche `main` est vide pendant le développement. Elle ne reçoit du contenu qu'à la fin du projet via une fusion avec `dev`.
 
@@ -29,10 +29,11 @@
 
 ## 🔀 Workflow Git
 
-### 1. fork le repo 
+###  fork le repo 
 decocher le bouton coupier seulement....
 
 ### 1. Cloner le repo
+# ouvre le cmd
 ```bash
 cd desktop
 git clone https://github.com/ton username/projet-collaboratif-groupesportvibes.git
@@ -54,13 +55,17 @@ git checkout -b feature/votre-nom
 
 ### 3. Envoyer son travail en un seul push
 ```bash
-New-Item nom.html ou nom.css
+New-Item(ou touch) nom.html ou nom.css
+
+seulement pour le dossier---> image mkdir images -->git add images/ -->git commit -m "Ajout dossier images"--> git push origin feature/ousmane
+
 code nom.html ou nom.css ( taper le code )
 ouvrir le treminal dans vscode
-cd C:\Users\bmd\OneDrive\Bureau\projet-collaboratif-groupesportvibe1
+cd C:\Users\bmd\OneDrive\Bureau\projet-collaboratif-groupesportvibes
 git add nom.html ou nom.css
 git commit -m "Description claire du fichier ajouté"
 git push origin feature/votre-nom
+
 ```
 
 ### 4. Ouvrerture la fenetre
