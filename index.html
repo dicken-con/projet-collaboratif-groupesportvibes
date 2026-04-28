@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SportVibe – Équipements Sport</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart">
+    🛒 Panier <span class="cart-count" id="cartCount">0</span>
+  </a>
+</nav>
+
+<!-- PAGE -->
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-stripes"></div>
+    <div class="hero-content">
+      <div class="hero-tag">🏆 Nouvelle Collection 2025</div>
+      <h1>ÉQUIPE-TOI <span>POUR GAGNER</span></h1>
+      <p>Découvrez notre sélection premium d'équipements sportifs pour tous les niveaux. Du débutant au champion, nous avons ce qu'il vous faut.</p>
+      <div class="hero-btns">
+        <a href="football.html" class="btn-primary">Découvrir 🚀</a>
+        <a href="apropos.html" class="btn-secondary">Notre Histoire →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Produits</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Sports</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12K+</div>
+      <div class="stat-label">Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Note Moyenne</div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="section-header">
+    <div class="section-tag">🏅 Explorer</div>
+    <h2 class="section-title">NOS <span>CATÉGORIES</span></h2>
+  </div>
+
+  <section class="categories-section">
+    <div class="categories-grid">
+
+      <a href="football.html" class="cat-card" style="--accent:#00C853; --bg: linear-gradient(135deg,#001a08,#003d12);">
+        <div class="cat-card-img-placeholder" style="--bg: linear-gradient(135deg,#001a08,#003d12);">⚽</div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Football</div>
+          <div class="cat-card-count">7 Articles disponibles</div>
+        </div>
+        <div class="cat-card-arrow" style="background:#00C853;">→</div>
+      </a>
+
+      <a href="basketball.html" class="cat-card" style="--accent:#FF6D00; --bg: linear-gradient(135deg,#1a0800,#3d1800);">
+        <div class="cat-card-img-placeholder" style="background: linear-gradient(135deg,#1a0800,#3d1800);">🏀</div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Basketball</div>
+          <div class="cat-card-count">6 Articles disponibles</div>
+        </div>
+        <div class="cat-card-arrow" style="background:#FF6D00;">→</div>
+      </a>
+
+      <a href="tennis.html" class="cat-card" style="--accent:#FFD600; --bg: linear-gradient(135deg,#1a1500,#3d3200);">
+        <div class="cat-card-img-placeholder" style="background: linear-gradient(135deg,#1a1500,#3d3200);">🎾</div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Tennis</div>
+          <div class="cat-card-count">6 Articles disponibles</div>
+        </div>
+        <div class="cat-card-arrow" style="background:#FFD600; color:#000;">→</div>
+      </a>
+
+      <a href="natation.html" class="cat-card" style="--accent:#0091EA; --bg: linear-gradient(135deg,#00091a,#00213d);">
+        <div class="cat-card-img-placeholder" style="background: linear-gradient(135deg,#00091a,#00213d);">🏊</div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Natation</div>
+          <div class="cat-card-count">5 Articles disponibles</div>
+        </div>
+        <div class="cat-card-arrow" style="background:#0091EA;">→</div>
+      </a>
+
+      <a href="fitness.html" class="cat-card" style="--accent:#AA00FF; --bg: linear-gradient(135deg,#0e001a,#1e003d);">
+        <div class="cat-card-img-placeholder" style="background: linear-gradient(135deg,#0e001a,#1e003d);">💪</div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Fitness</div>
+          <div class="cat-card-count">7 Articles disponibles</div>
+        </div>
+        <div class="cat-card-arrow" style="background:#AA00FF;">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner" style="margin: 0 40px 80px;">
+    <div class="promo-text">
+      <h2>🔥 SOLDES D'ÉTÉ — JUSQU'À -40%</h2>
+      <p>Profitez de réductions exceptionnelles sur des centaines d'articles sportifs. Offre limitée !</p>
+    </div>
+    <a href="football.html" class="btn-white">Explorer les Offres →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2025. Qualité, performance et passion dans chaque produit.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="#">📘</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">🐦</a>
+        <a class="social-btn" href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Infos</h4>
+      <ul>
+        <li><a href="apropos.html">À Propos</a></li>
+        <li><a href="panier.html">Mon Panier</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📧 contact@sportvibe.fr</a></li>
+        <li><a href="#">📞 221 942 42 90</a></li>
+        <li><a href="#">📍 DAKAR, senegal</a></li>
+        <li><a href="#">Lun–Sam 9h–19h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 SportVibe. Tous droits réservés.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">CGV</a>
+      <a href="#">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
+
+<script>
+// Gestion panier
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+function updateCount() {
+  const c = getCart();
+  const total = c.reduce((s, i) => s + i.qty, 0);
+  document.getElementById('cartCount').textContent = total;
+}
+function addToCart(name, price, emoji) {
+  const c = getCart();
+  const idx = c.findIndex(i => i.name === name);
+  if (idx >= 0) c[idx].qty++;
+  else c.push({ name, price, emoji, qty: 1 });
+  saveCart(c);
+  updateCount();
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+updateCount();
+</script>
+</body>
+</html>
