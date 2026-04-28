@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basketball – SportVibe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root { --accent-color: #FF6D00; }
+    .btn-add-cart { background: #FF6D00 !important; }
+    .product-category { color: #FF6D00 !important; }
+    .cat-hero { border-bottom-color: #FF6D00; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#" class="active">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+</nav>
+
+<div class="page-wrapper">
+
+  <div class="cat-hero" style="border-bottom-color:#FF6D00;">
+    <div class="cat-hero-icon">🏀</div>
+    <div class="cat-hero-text">
+      <div class="cat-breadcrumb"><a href="index.html">Accueil</a> › Basketball</div>
+      <h1>BASKETBALL</h1>
+      <p>Montez votre niveau sur le parquet avec notre équipement haut de gamme</p>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <div class="products-top">
+      <div class="products-count">6 articles trouvés</div>
+      <select class="sort-select">
+        <option>Trier par : Popularité</option>
+        <option>Prix croissant</option>
+        <option>Prix décroissant</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <span class="product-badge top">TOP VENTE</span>
+        <div class="product-img">
+    <img src="image/ballonbaskt.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Ballon Officiel NBA Replica</div>
+          <div class="product-desc">Ballon similaire aux matchs officiels NBA. Surface composite pour une adhérence optimale indoor/outdoor.</div>
+          <div class="product-stars">★★★★★ (215)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">6000 frcs</span>
+              <span class="price-old">9000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Ballon NBA Replica', 34.99, '🏀')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/chaussbaskt.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Chaussures High-Top Boost</div>
+          <div class="product-desc">Tige montante pour le soutien de la cheville, semelle anti-dérapante, technologie Boost pour l'amorti. Coloris exclusif.</div>
+          <div class="product-stars">★★★★★ (178)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">17000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Chaussures High-Top Boost', 119.99, '👟')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/maillotbaskt.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Maillot Reversible Team</div>
+          <div class="product-desc">Maillot double face numéroté, tissu mesh ultra-respirant, finitions sublimées résistantes au lavage.</div>
+          <div class="product-stars">★★★★☆ (94)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">5000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Maillot Reversible Team', 42.99, '🦺')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge promo">-30%</span>
+        <div class="product-img">
+    <img src="image/panierbaskt.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Panier Réglable Pro 2,4–3,05m</div>
+          <div class="product-desc">Panier réglable en hauteur de 2,40m à 3,05m, panneau acrylique 90cm, système hydraulique. Idéal dès le jeune âge.</div>
+          <div class="product-stars">★★★★☆ (56)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">25000 frcs</span>
+              <span class="price-old">35000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Panier Réglable Pro', 279.99, '🏋️')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/shortbaskt.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Short Cargo Player Edition</div>
+          <div class="product-desc">Short de jeu longueur genou, ceinture élastique + cordon, 2 poches latérales. Tissu DryFit infroissable.</div>
+          <div class="product-stars">★★★☆☆ (41)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">8000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Short Cargo Player Edition', 29.99, '🩳')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/genoubasket.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">BASKETBALL</div>
+          <div class="product-name">Genouillères Pro Compression</div>
+          <div class="product-desc">Protection articulaire niveau pro, tissu néoprène respirant, maintien anti-glisse, taille S à XL. Pack de 2.</div>
+          <div class="product-stars">★★★★★ (73)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">3000 frcs</span>
+              <span class="price-old">9500 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Genouillères Pro Compression', 24.99, '🧢')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Infos</h4>
+      <ul>
+        <li><a href="apropos.html">À Propos</a></li>
+        <li><a href="panier.html">Mon Panier</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📧 contact@sportvibe.fr</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 SportVibe.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
+
+<script>
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+function updateCount() {
+  const c = getCart();
+  document.getElementById('cartCount').textContent = c.reduce((s,i)=>s+i.qty,0);
+}
+function addToCart(name, price, emoji) {
+  const c = getCart(); const idx = c.findIndex(i=>i.name===name);
+  if(idx>=0) c[idx].qty++; else c.push({name,price,emoji,qty:1});
+  saveCart(c); updateCount();
+  const t=document.getElementById('toast'); t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+updateCount();
+</script>
+</body>
+</html>
