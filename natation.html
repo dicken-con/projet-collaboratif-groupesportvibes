@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Natation – SportVibe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root { --accent-color: #0091EA; }
+    .btn-add-cart { background: #0091EA !important; }
+    .product-category { color: #0091EA !important; }
+    .cat-hero { border-bottom-color: #0091EA; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#" class="active">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+</nav>
+
+<div class="page-wrapper">
+
+  <div class="cat-hero" style="border-bottom-color:#0091EA;">
+    <div class="cat-hero-icon">🏊</div>
+    <div class="cat-hero-text">
+      <div class="cat-breadcrumb"><a href="index.html">Accueil</a> › Natation</div>
+      <h1>NATATION</h1>
+      <p>Équipez-vous pour fendre l'eau — vitesse, technique et confort</p>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <div class="products-top">
+      <div class="products-count">5 articles trouvés</div>
+      <select class="sort-select">
+        <option>Trier par : Popularité</option>
+        <option>Prix croissant</option>
+        <option>Prix décroissant</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <span class="product-badge top">TOP VENTE</span>
+        <div class="product-img">
+    <img src="image/maillonat.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">NATATION</div>
+          <div class="product-name">Maillot Racing Femme LZR</div>
+          <div class="product-desc">Maillot compétition une-pièce, tissu chlore-résistant, compression légère, séchage ultra-rapide. Homologué FINA.</div>
+          <div class="product-stars">★★★★★ (143)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">20400 frcs</span>
+              <span class="price-old">23000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Maillot Racing Femme LZR', 64.99, '🩱')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/lunetnat.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">NATATION</div>
+          <div class="product-name">Lunettes de Nage Mirroir UV</div>
+          <div class="product-desc">Verres miroir anti-UV et anti-buée, joint silicone anatomique, pont de nez ajustable. Idéal pour la nage en eaux libres.</div>
+          <div class="product-stars">★★★★★ (267)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">15000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Lunettes de Nage Mirroir UV', 19.99, '🥽')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/bonnetnat.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">NATATION</div>
+          <div class="product-name">Bonnet Silicone Pro Race</div>
+          <div class="product-desc">Bonnet en silicone élastique, résistant au chlore, forme hydrodynamique. Disponible en 12 couleurs. Taille unique.</div>
+          <div class="product-stars">★★★★☆ (88)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">3500 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Bonnet Silicone Pro Race', 7.99, '👙')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge promo">-15%</span>
+        <div class="product-img">
+    <img src="image/planchnat.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">NATATION</div>
+          <div class="product-name">Planche de Nage Kick Board</div>
+          <div class="product-desc">Planche en EVA haute densité pour travail des jambes. Ergonomique, antidérapante, flottabilité optimale. 45×30cm.</div>
+          <div class="product-stars">★★★★☆ (72)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">10550 frcs</span>
+              <span class="price-old">12800 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Planche de Nage Kick Board', 14.99, '🛟')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/palmnat.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">NATATION</div>
+          <div class="product-name">Palmes d'Entraînement Short Fin</div>
+          <div class="product-desc">Palmes courtes en silicone souple, développe la puissance des chevilles et améliore la technique de nage. Réglable.</div>
+          <div class="product-stars">★★★★★ (51)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">8600 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Palmes dEntraînement Short Fin', 34.99, '🦵')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col"><h4>Infos</h4><ul><li><a href="apropos.html">À Propos</a></li><li><a href="panier.html">Panier</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📧 contact@sportvibe.fr</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 SportVibe.</p></div>
+</footer>
+
+<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
+
+<script>
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+function updateCount() { document.getElementById('cartCount').textContent = getCart().reduce((s,i)=>s+i.qty,0); }
+function addToCart(name, price, emoji) {
+  const c=getCart(); const idx=c.findIndex(i=>i.name===name);
+  if(idx>=0) c[idx].qty++; else c.push({name,price,emoji,qty:1});
+  saveCart(c); updateCount();
+  const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500);
+}
+updateCount();
+</script>
+</body>
+</html>
