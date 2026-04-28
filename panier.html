@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon Panier – SportVibe</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart active">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+</nav>
+
+<div class="page-wrapper">
+  <div class="panier-section">
+    <h1>MON <span>PANIER</span></h1>
+
+    <!-- Panier vide -->
+    <div class="panier-empty" id="emptyCart" style="display:none;">
+      <div class="empty-icon">🛒</div>
+      <h2>PANIER VIDE</h2>
+      <p>Vous n'avez pas encore ajouté d'articles. Explorez nos catégories !</p>
+      <a href="index.html" class="btn-primary">Continuer mes achats →</a>
+    </div>
+
+    <!-- Panier rempli -->
+    <div class="panier-grid" id="cartContent">
+      <div class="panier-items" id="cartItems"></div>
+
+      <div class="panier-summary">
+        <div class="summary-title">🧾 Récapitulatif</div>
+
+        <div class="summary-row">
+          <span class="summary-label">Sous-total</span>
+          <span id="subtotal">000 frcs</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Livraison</span>
+          <span id="shipping">Gratuite</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Réduction</span>
+          <span id="discount" style="color:var(--vert);">-000 frcs</span>
+        </div>
+
+        <div class="livraison-badge">
+          🚚 Livraison offerte dès 30000 frcs d'achat !
+        </div>
+
+        <div class="summary-row total">
+          <span>TOTAL</span>
+          <span class="total-val" id="total">0000 frcs</span>
+        </div>
+
+        <button class="btn-checkout" onclick="checkout()">
+          🔒 Passer ma commande
+        </button>
+
+        <div style="text-align:center; margin-top:16px;">
+          <a href="index.html" style="color:var(--gris-c); font-size:0.85rem; text-decoration:none;">
+            ← Continuer mes achats
+          </a>
+        </div>
+
+        <div style="margin-top:20px; padding-top:20px; border-top:1px solid var(--gris-m); display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+          <span style="font-size:1.4rem;" title="Visa">💳</span>
+          <span style="font-size:1.4rem;" title="Mastercard">🏦</span>
+          <span style="font-size:1.4rem;" title="PayPal">🅿️</span>
+          <span style="font-size:1.4rem;" title="Apple Pay">🍎</span>
+        </div>
+        <p style="text-align:center; font-size:0.75rem; color:var(--gris-c); margin-top:8px;">🔒 Paiement 100% sécurisé</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col"><h4>Infos</h4><ul><li><a href="apropos.html">À Propos</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📧 contact@sportvibe.fr</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 SportVibe.</p></div>
+</footer>
+
+<div class="toast" id="toast">🗑️ Article retiré</div>
+
+<script>
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+
+function fmt(n) { return n.toFixed(2).replace('.',',') + 'frcs'; }
+
+function renderCart() {
+  const c = getCart();
+  const countEl = document.getElementById('cartCount');
+  const itemsEl = document.getElementById('cartItems');
+  const emptyEl = document.getElementById('emptyCart');
+  const contentEl = document.getElementById('cartContent');
+  const total = c.reduce((s,i)=>s+i.qty,0);
+  countEl.textContent = total;
+
+  if(c.length === 0) {
+    emptyEl.style.display = 'block';
+    contentEl.style.display = 'none';
+    return;
+  }
+
+  emptyEl.style.display = 'none';
+  contentEl.style.display = 'grid';
+
+  let html = '';
+  let subtotal = 0;
+  c.forEach((item, idx) => {
+    const lineTotal = item.price * item.qty;
+    subtotal += lineTotal;
+    html += `
+      <div class="panier-item">
+        <div class="panier-item-img">${item.emoji}</div>
+        <div class="panier-item-info">
+          <div class="panier-item-cat">SportVibe</div>
+          <div class="panier-item-name">${item.name}</div>
+          <div class="panier-item-controls">
+            <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:flex-end; gap:10px;">
+          <div class="panier-item-price">${fmt(lineTotal)}</div>
+          <button class="btn-remove" onclick="removeItem(${idx})" title="Supprimer">🗑️</button>
+        </div>
+      </div>
+    `;
+  });
+
+  itemsEl.innerHTML = html;
+
+  const shipping = subtotal >= 50 ? 0 : 4.99;
+  const discount = subtotal > 100 ? subtotal * 0.05 : 0;
+  const totalVal = subtotal + shipping - discount;
+
+  document.getElementById('subtotal').textContent = fmt(subtotal);
+  document.getElementById('shipping').textContent = shipping === 0 ? '🎁 Gratuite' : fmt(shipping);
+  document.getElementById('discount').textContent = discount > 0 ? '-' + fmt(discount) + ' (5% fidélité)' : '-0,00€';
+  document.getElementById('total').textContent = fmt(totalVal);
+}
+
+function changeQty(idx, delta) {
+  const c = getCart();
+  c[idx].qty += delta;
+  if(c[idx].qty <= 0) c.splice(idx, 1);
+  saveCart(c);
+  renderCart();
+}
+
+function removeItem(idx) {
+  const c = getCart();
+  c.splice(idx, 1);
+  saveCart(c);
+  renderCart();
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2000);
+}
+
+function checkout() {
+  alert('🎉 Merci pour votre commande !\n\nVous seriez redirigé vers le paiement sécurisé dans un vrai site.\n\nSportVibe vous remercie !');
+  localStorage.removeItem('sportvibe-cart');
+  renderCart();
+}
+
+renderCart();
+</script>
+</body>
+</html>
