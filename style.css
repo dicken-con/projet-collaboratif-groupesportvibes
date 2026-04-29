@@ -1,11 +1,11 @@
-
-
 /* ============================================================
    SPORTVIBE - Style Global
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+
 /* v2 */
+
 /* --- Variables --- */
 :root {
   --rouge:    #FF1744;
@@ -824,7 +824,6 @@ ul { list-style: none; }
 .qty-btn {
   width: 30px; height: 30px;
   background: var(--gris-m);
-   
   border: none;
   color: var(--blanc);
   border-radius: 6px;
@@ -919,7 +918,53 @@ ul { list-style: none; }
 
 .btn-checkout {
   display: block;
-…
+  width: 100%;
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  color: var(--blanc);
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 16px;
+}
+
+.btn-checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,23,68,0.4);
+}
+
+/* ============================================================
+   PANIER VIDE
+   ============================================================ */
+.panier-empty {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 24px;
+}
+
+.panier-empty h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.panier-empty p {
+  color: var(--gris-c);
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -1205,55 +1250,6 @@ ul { list-style: none; }
 }
 
 /* ============================================================
-   PANIER VIDE
-   ============================================================ */
-.panier-empty {
-  text-align: center;
-  padding: 80px 40px;
-}
-
-.empty-icon {
-  font-size: 5rem;
-  margin-bottom: 24px;
-}
-
-.panier-empty h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.panier-empty p {
-  color: var(--gris-c);
-  font-size: 1rem;
-  margin-bottom: 32px;
-}
-
-.btn-checkout {
-  display: block;
-  width: 100%;
-  background: linear-gradient(90deg, var(--rouge), var(--orange));
-  color: var(--blanc);
-  border: none;
-  padding: 16px;
-  border-radius: 10px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-bottom: 16px;
-}
-
-.btn-checkout:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255,23,68,0.4);
-}
-
-/* ============================================================
    TOAST
    ============================================================ */
 .toast {
@@ -1275,4 +1271,3 @@ ul { list-style: none; }
 .toast.show {
   transform: translateX(-50%) translateY(0);
 }
-[Message tronqué]  Afficher l'intégralité du message
