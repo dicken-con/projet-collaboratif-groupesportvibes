@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness – SportVibe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root { --accent-color: #AA00FF; }
+    .btn-add-cart { background: #AA00FF !important; }
+    .product-category { color: #AA00FF !important; }
+    .cat-hero { border-bottom-color: #AA00FF; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#" class="active">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+</nav>
+
+<div class="page-wrapper">
+
+  <div class="cat-hero" style="border-bottom-color:#AA00FF;">
+    <div class="cat-hero-icon">💪</div>
+    <div class="cat-hero-text">
+      <div class="cat-breadcrumb"><a href="index.html">Accueil</a> › Fitness</div>
+      <h1>FITNESS</h1>
+      <p>Sculptez votre corps et repoussez vos limites avec nos équipements fitness</p>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <div class="products-top">
+      <div class="products-count">7 articles trouvés</div>
+      <select class="sort-select">
+        <option>Trier par : Popularité</option>
+        <option>Prix croissant</option>
+        <option>Prix décroissant</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <span class="product-badge top">TOP VENTE</span>
+        <div class="product-img">
+    <img src="image/altfit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Haltères Réglables 2–24kg</div>
+          <div class="product-desc">Paire d'haltères réglables de 2 à 24kg, système de réglage rapide en secondes, acier chromé + grip antidérapant.</div>
+          <div class="product-stars">★★★★★ (324)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">14300 frcs</span>
+              <span class="price-old">22000 frcs </span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Haltères Réglables 2-24kg', 199.99, '🏋️')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/tapisfit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Tapis Yoga Pro 6mm Non-Slip</div>
+          <div class="product-desc">Tapis épaisseur 6mm en TPE écologique, surface microfibre antidérapante, lavable, sac de transport inclus. 183×61cm.</div>
+          <div class="product-stars">★★★★★ (198)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">9000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Tapis Yoga Pro 6mm', 44.99, '🧘')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/bandfit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Bandes de Résistance x5 Niveaux</div>
+          <div class="product-desc">Set de 5 élastiques de résistances différentes (10 à 50kg), latex naturel, idéal pour musculation, yoga et rééducation.</div>
+          <div class="product-stars">★★★★☆ (141)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">4600 frcs</span>
+              <span class="price-old">19700 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Bandes Résistance x5', 24.99, '🔗')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge promo">-35%</span>
+        <div class="product-img">
+    <img src="image/cordefit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Corde à Sauter Speed Bearing</div>
+          <div class="product-desc">Corde à sauter pro avec roulements à billes, câble acier gainé PVC, poignées ergonomiques. Longueur réglable.</div>
+          <div class="product-stars">★★★★★ (87)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">15300 frcs</span>
+              <span class="price-old">22000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Corde à Sauter Speed Bearing', 12.99, '🏃')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/gantfit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Gants de Musculation Wrist Wrap</div>
+          <div class="product-desc">Gants avec support poignet intégré, paume gel rembourrée, velcro double, tissu respirant. Tailles XS à XXL.</div>
+          <div class="product-stars">★★★★☆ (112)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">6100 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Gants Musculation Wrist Wrap', 22.99, '💪')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/kettfit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Kettlebell Fonte 16kg</div>
+          <div class="product-desc">Kettlebell fonte laquée, base plate anti-dérapante, handle large pour deux mains. Certifié CE. Disponible de 8 à 32kg.</div>
+          <div class="product-stars">★★★★★ (63)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">34000 frcs</span>
+              <span class="price-old">45800 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Kettlebell Fonte 16kg', 49.99, '⚖️')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/montrefit.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">FITNESS</div>
+          <div class="product-name">Montre Connectée SportTrack Pro</div>
+          <div class="product-desc">Montre GPS multi-sport, suivi FC, SpO2, sommeil. Autonomie 14 jours, étanche 50m, compatibilité iOS & Android.</div>
+          <div class="product-stars">★★★★★ (299)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">42000 frcs</span>
+              <span class="price-old">53000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Montre SportTrack Pro', 129.99, '📱')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col"><h4>Infos</h4><ul><li><a href="apropos.html">À Propos</a></li><li><a href="panier.html">Panier</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📧 contact@sportvibe.fr</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 SportVibe.</p></div>
+</footer>
+
+<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
+
+<script>
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+function updateCount() { document.getElementById('cartCount').textContent = getCart().reduce((s,i)=>s+i.qty,0); }
+function addToCart(name, price, emoji) {
+  const c=getCart(); const idx=c.findIndex(i=>i.name===name);
+  if(idx>=0) c[idx].qty++; else c.push({name,price,emoji,qty:1});
+  saveCart(c); updateCount();
+  const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500);
+}
+updateCount();
+</script>
+</body>
+</html>
+

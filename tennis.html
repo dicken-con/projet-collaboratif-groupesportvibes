@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tennis – SportVibe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root { --accent-color: #FFD600; }
+    .btn-add-cart { background: #FFD600 !important; color: #000 !important; }
+    .product-category { color: #FFD600 !important; }
+    .cat-hero { border-bottom-color: #FFD600; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <div class="nav-dropdown">
+      <a href="#" class="active">Catégories</a>
+      <div class="dropdown-menu">
+        <a href="football.html">⚽ Football</a>
+        <a href="basketball.html">🏀 Basketball</a>
+        <a href="tennis.html">🎾 Tennis</a>
+        <a href="natation.html">🏊 Natation</a>
+        <a href="fitness.html">💪 Fitness</a>
+      </div>
+    </div>
+    <a href="apropos.html">À Propos</a>
+  </div>
+  <a href="panier.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+</nav>
+
+<div class="page-wrapper">
+
+  <div class="cat-hero" style="border-bottom-color:#FFD600;">
+    <div class="cat-hero-icon">🎾</div>
+    <div class="cat-hero-text">
+      <div class="cat-breadcrumb"><a href="index.html">Accueil</a> › Tennis</div>
+      <h1>TENNIS</h1>
+      <p>Raquettes, balles et tenues pour les amateurs comme les champions</p>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <div class="products-top">
+      <div class="products-count">6 articles trouvés</div>
+      <select class="sort-select">
+        <option>Trier par : Popularité</option>
+        <option>Prix croissant</option>
+        <option>Prix décroissant</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <span class="product-badge top">TOP VENTE</span>
+        <div class="product-img">
+    <img src="image/raquetennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Raquette Pro Control 300g</div>
+          <div class="product-desc">Raquette polyvalente pour joueurs confirmés. Cadre graphite 16×19, équilibre parfait pour puissance et contrôle.</div>
+          <div class="product-stars">★★★★★ (189)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">12000 frcs</span>
+              <span class="price-old">16000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Raquette Pro Control 300g', 149.99, '🎾')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/balltennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Balles Roland Garros x4</div>
+          <div class="product-desc">Balles officielles type terre battue, feutre extra-durable, pression parfaite. Boîte de 4, homologuées ITF.</div>
+          <div class="product-stars">★★★★☆ (312)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">3000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Balles Roland Garros x4', 6.99, '🟡')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/chausstennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Chaussures Clay Court Pro</div>
+          <div class="product-desc">Semelle herringbone spéciale terre battue, tige renforcée, amorti Gel. Disponible pour homme et femme.</div>
+          <div class="product-stars">★★★★★ (98)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">13700 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Chaussures Clay Court Pro', 109.99, '👟')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge promo">-20%</span>
+        <div class="product-img">
+    <img src="image/polotennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Polo Technique Anti-UV</div>
+          <div class="product-desc">Polo léger protection UV50+, col polo, tissu microfibre hydrofuge. Look élégant pour le court.</div>
+          <div class="product-stars">★★★★☆ (67)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">24800 frcs</span>
+              <span class="price-old">45000 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Polo Technique Anti-UV', 39.99, '👕')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+    <img src="image/sactennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Sac Raquette 6 Positions</div>
+          <div class="product-desc">Sac thermobag 6 raquettes, grande poche vêtements, compartiment chaussures séparé. Bandoulière ergonomique.</div>
+          <div class="product-stars">★★★★☆ (44)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">16700 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Sac Raquette 6 Positions', 59.99, '🎒')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">NOUVEAU</span>
+        <div class="product-img">
+    <img src="image/cordetennis.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
+</div>
+        <div class="product-body">
+          <div class="product-category">TENNIS</div>
+          <div class="product-name">Corde Polyester Tour 1.25mm</div>
+          <div class="product-desc">Corde monofilament polyester co-polyester, excellent contrôle, durabilité longue durée. Bobine 12m, plusieurs couleurs.</div>
+          <div class="product-stars">★★★★★ (156)</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-current">6400 frcs</span>
+              <span class="price-old">7800 frcs</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('Corde Polyester Tour 1.25mm', 12.99, '🦾')">🛒 Ajouter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">⚡ SPORTVIBE</div>
+      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sports</h4>
+      <ul>
+        <li><a href="football.html">⚽ Football</a></li>
+        <li><a href="basketball.html">🏀 Basketball</a></li>
+        <li><a href="tennis.html">🎾 Tennis</a></li>
+        <li><a href="natation.html">🏊 Natation</a></li>
+        <li><a href="fitness.html">💪 Fitness</a></li>
+      </ul>
+    </div>
+    <div class="footer-col"><h4>Infos</h4><ul><li><a href="apropos.html">À Propos</a></li><li><a href="panier.html">Panier</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📧 contact@sportvibe.fr</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 SportVibe.</p></div>
+</footer>
+
+<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
+
+<script>
+function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
+function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
+function updateCount() { document.getElementById('cartCount').textContent = getCart().reduce((s,i)=>s+i.qty,0); }
+function addToCart(name, price, emoji) {
+  const c=getCart(); const idx=c.findIndex(i=>i.name===name);
+  if(idx>=0) c[idx].qty++; else c.push({name,price,emoji,qty:1});
+  saveCart(c); updateCount();
+  const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500);
+}
+updateCount();
+</script>
+</body>
+</html> 
